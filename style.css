@@ -1,0 +1,85 @@
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+body{
+   background-image: url('https://www.webdesign.org/img_articles/20366/04.jpg');
+}
+/* Panel with input text and button */
+.controlPanel{
+   display: flex;
+   justify-content: center;
+   margin-top: 20px;
+}
+.controlPanel #toDoText, .controlPanel #toDoButton{
+   height: 30px;
+}
+.controlPanel #toDoButton{
+   /* width: 150px; */
+   padding: 5px 10px;
+}
+.controlPanel #toDoText{
+   width: 300px;
+}
+
+/* Container of the list */
+.listContainer{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   margin-top: 20px;
+}
+#toDoList{
+   list-style: none;
+}
+#toDoList .list-item{
+   padding: 10px 15px;
+   text-align: center;
+   cursor: pointer;
+   position: relative;
+   border-bottom: 1px solid white;
+}
+#toDoList .list-item:hover{
+   background-color: #ffff66;
+}
+
+/* Dropdown menu */
+.list-item .dropDown{
+   display: none;
+   position: absolute;
+   right: -110px;
+   top: 50%;
+   transform: translateY(-50%);
+   border: 1px solid black;
+   width: 100px;
+   /* height: 100px; */
+   background-color: white;
+}
+.dropDown .delete{
+   border-bottom: 1px solid black;
+}
+.dropDown .delete:hover, .dropDown .change:hover{
+   background-color: lightgrey;
+}
+.dropDown .delete, .dropDown .change{
+   padding: 5px 10px;
+}
+.dropDown .rectangle{
+   width: 10px;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: -10px;
+}
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right:10px solid white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
